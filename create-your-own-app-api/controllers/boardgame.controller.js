@@ -8,12 +8,18 @@ module.exports = {
       res.json({ response });
     });
   },
-  //   deleteGame(req, res) {
-  //     BoardgameService.delete();
-  //   },
+  deleteGame(req, res) {
+    const id = req.body;
+    BoardgameService.delete(id, response => {
+      res.json({ response });
+    });
+  },
   getAllGames(req, res) {
     BoardgameService.findAll(boardgames => {
-      res.json(boardgames);
+      res.json({ boardgames });
     });
+  },
+  getSingleGame(req, res) {
+    res.json({ response });
   }
 };
