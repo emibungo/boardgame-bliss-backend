@@ -7,7 +7,7 @@ const boardgameController = require("../controllers/boardgame.controller");
 router.get("/", boardgameController.getAllGames);
 
 // POST New Game
-router.post("/", boardgameController.postNewGame);
+router.post("/", boardgameController.addNewGame);
 
 // DELETE Single Game
 router.delete("/:id", boardgameController.deleteGame);
