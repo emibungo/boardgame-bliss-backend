@@ -18,8 +18,5 @@ module.exports = {
     BoardgameService.findAll(boardgames => {
       res.json({ boardgames });
     });
-  },
-  getSingleGame(req, res) {
-    res.json({ response });
   }
 };
