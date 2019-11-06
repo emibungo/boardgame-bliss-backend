@@ -8,8 +8,8 @@ const gameDetailSchema = new Schema({
   numberOfPlayers: { required: true, type: String },
   ageRange: { required: true, type: String },
   length: { required: true, type: String },
-  publisher: { required: true, type: String },
-  categories: { required: true, categorySchema }
+  publisher: { required: true, type: String }
+  // categories: { required: true, categorySchema }
 });
 
 const GameDetail = mongoose.model("gameDetail", gameDetailSchema);

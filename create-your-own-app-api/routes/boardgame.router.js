@@ -1,18 +1,18 @@
 const express = require("express");
 const router = express.Router();
 
-const boardgameController = require("../controllers/boardgame.controller");
-
-// GET All Games
-router.get("/", boardgameController.getAllGames);
-
-// GET Single Game
-router.get("/:id", boardgameController.getSingleGame);
-
-// POST New Game
-router.post("/", boardgameController.addNewGame);
+const BoardgameController = require("../controllers/boardgame.controller");
 
 // DELETE Single Game
-router.delete("/:id", boardgameController.deleteGame);
+router.delete("/:id", BoardgameController.deleteGame);
+
+// GET All Games
+router.get("/", BoardgameController.getAllGames);
+
+// GET Single Game
+router.get("/:id", BoardgameController.getSingleGame);
+
+// POST New Game
+router.post("/", BoardgameController.addNewGame);
 
 module.exports = router;

@@ -8,8 +8,13 @@ module.exports = {
     );
     newBoardgame.save().then(callback);
   },
-  delete() {},
+  deleteById(id, callback) {
+    BoardgameModel.findOneAndDelete(id).then(callback);
+  },
   findAll(callback) {
     BoardgameModel.find().then(callback);
+  },
+  findById(id, callback) {
+    BoardgameModel.findById(id).then(callback);
   }
 };

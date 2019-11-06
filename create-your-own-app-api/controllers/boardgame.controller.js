@@ -9,14 +9,20 @@ module.exports = {
     });
   },
   deleteGame(req, res) {
-    const id = req.body;
-    BoardgameService.delete(id, response => {
-      res.json({ response });
+    const { id } = req.params;
+    BoardgameService.deleteById(id, boardgame => {
+      res.json({ message: "Boardgame deleted", boardgame });
     });
   },
   getAllGames(req, res) {
     BoardgameService.findAll(boardgames => {
       res.json({ boardgames });
+    });
+  },
+  getSingleGame(req, res) {
+    const { id } = req.params;
+    BoardgameService.findById(id, boardgame => {
+      res.json({ boardgame });
     });
   }
 };
