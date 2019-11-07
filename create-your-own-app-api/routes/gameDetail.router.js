@@ -3,7 +3,10 @@ const router = express.Router();
 
 const gameDetailController = require("../controllers/gameDetail.controller");
 
-// GET Single Game Details
+// DELETE Single Game
+router.delete("/:id", gameDetailController.deleteGame);
+
+// GET Single Game
 router.get("/:id", gameDetailController.getSingleGame);
 
 module.exports = router;
