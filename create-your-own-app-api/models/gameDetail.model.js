@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const categorySchema = new Schema({ categoryName: String });
-
 const gameDetailSchema = new Schema({
   title: { ref: "Boardgame", type: mongoose.Schema.Types.ObjectId },
   numberOfPlayers: { required: true, type: String },
@@ -12,6 +10,6 @@ const gameDetailSchema = new Schema({
   // categories: { required: true, categorySchema }
 });
 
-const GameDetail = mongoose.model("gameDetail", gameDetailSchema);
+const GameDetail = mongoose.model("GameDetail", gameDetailSchema);
 
 module.exports = GameDetail;
