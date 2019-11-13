@@ -2,9 +2,10 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+require("./cyoa/utils/db")
 
-const boardgameRouter = require("./create-your-own-app-api/routes/boardgame.router");
-const gameDetailRouter = require("./create-your-own-app-api/routes/gameDetail.router");
+const boardgameRouter = require("./cyoa/routes/boardgame.router");
+const gameDetailRouter = require("./cyoa/routes/gameDetail.router");
 
 const app = express();
 
