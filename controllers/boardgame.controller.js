@@ -11,8 +11,8 @@ module.exports = {
   deleteSingleGame(req, res) {
     const { id } = req.params;
     BoardgameService.deleteById(id, boardgame => {
-      res.json({ message: "Game deleted", boardgame})
-    })
+      res.json({ message: "Game deleted", boardgame });
+    });
   },
   getAllGames(req, res) {
     BoardgameService.findAll(boardgames => {
@@ -22,6 +22,7 @@ module.exports = {
   getGameById(req, res) {
     const { id } = req.params;
     BoardgameService.findById(id, boardgame => {
-      res.json({ boardgame })
-    })
+      res.json({ boardgame });
+    });
   }
+};
