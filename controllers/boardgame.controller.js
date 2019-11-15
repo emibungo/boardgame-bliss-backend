@@ -1,4 +1,4 @@
-const BoardgameService = require("../cyoa/services/boardgame.service");
+const BoardgameService = require("../services/boardgame.service");
 
 module.exports = {
   addNewGame(req, res) {

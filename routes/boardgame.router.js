@@ -1,18 +1,17 @@
+const boardgameController = require("../controllers/boardgame.controller");
 const express = require("express");
 const router = express.Router();
 
-const BoardgameController = require("../controllers/boardgame.controller");
-
 // DELETE Single Game by ID
-router.delete("/:id", BoardgameController.deleteSingleGame);
+router.delete("/:id", boardgameController.deleteSingleGame);
 
 // GET All Games
-router.get("/", BoardgameController.getAllGames);
+router.get("/", boardgameController.getAllGames);
 
 // GET Single Game by ID
-router.get("/:id", BoardgameController.getGameById);
+router.get("/:id", boardgameController.getGameById);
 
 // POST New Game
-router.post("/", BoardgameController.addNewGame);
+router.post("/", boardgameController.addNewGame);
 
 module.exports = router;
