@@ -1,4 +1,5 @@
-const GameDetailService = require("../services/gameDetail.service");
+// const GameDetailService = require("../services/gameDetail.service");
+const BoardgameService = require("../services/boardgame.service");
 
 module.exports = {
   deleteGame(req, res) {
