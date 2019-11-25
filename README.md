@@ -1,1 +1,5 @@
-Front end link https://github.com/crismagu/cyoa-front-end-emi-cristina.git
+# Boardgame Bliss
+
+## Your source for boardgame nirvana
+
+Link to FE https://github.com/emibungo/boardgame-bliss-frontend
